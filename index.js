@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "is@h@m123",
+  password: "abc123",
   database: "employees_db",
 });
 
@@ -16,7 +16,6 @@ connection.connect(function (err) {
   if (err) throw err;
   start();
 });
-
 
 const start = () => {
   inquirer
@@ -194,47 +193,47 @@ function addDepartment() {
 // Adding a new role to the database
 
 function addRole() {
-  
-  connection.query('SELECT * FROM department', function(err, res) {
-      if (err) throw err;
-      console.log({res});
-     
-      inquirer 
+  connection.query("SELECT * FROM department", function (err, res) {
+    if (err) throw err;
+    console.log({ res });
+
+    inquirer
       .prompt([
+        {
+          name: "new_role",
+          type: "input",
+          message: "What new role would you like to add?",
+        },
+        {
+          name: "salary",
+          type: "input",
+          message: "What is the salary of this role? (Enter a number)",
+        },
+        {
+          name: "department",
+          type: "list",
+          choices: res.map((department) => {
+            return {
+              name: department.name,
+              value: department.id,
+            };
+          }),
+        },
+      ])
+      .then(function (answer) {
+        connection.query(
+          "INSERT INTO role SET ?",
           {
-              name: 'new_role',
-              type: 'input', 
-              message: "What new role would you like to add?"
+            title: answer.new_role,
+            salary: answer.salary,
+            department_id: answer.department,
           },
-          {
-              name: 'salary',
-              type: 'input',
-              message: 'What is the salary of this role? (Enter a number)'
-          },
-          {
-              name: 'department',
-              type: 'list',
-              choices: res.map((department) => {
-                return {
-                  name: department.name,
-                  value: department.id,
-                }
-              })
+          function (err, res) {
+            if (err) throw err;
+            console.log("\n ROLE ADDED...\n ");
+            start();
           }
-      ]).then(function (answer) {
-            
-          connection.query(
-              'INSERT INTO role SET ?',
-              {
-                  title: answer.new_role,
-                  salary: answer.salary,
-                  department_id: answer.department
-              },
-              function (err, res) {
-                  if(err)throw err;
-                  console.log("\n ROLE ADDED...\n ");
-                  start();
-              })
-      })
-  })
-};
+        );
+      });
+  });
+}
