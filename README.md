@@ -1,12 +1,30 @@
 # Employee-tracker!
 
-![Badge](https://img.shields.io/badge/license-MIT-green)
+![Badge](https://img.shields.io/badge/license-MIT-blue)
 
 ## Description
 
 A Node CLI solution to manage a companies employee information.
 
-Technologies used
+# Deployed Link
+
+https://github.com/Hisaacs/Employee-tracker
+
+# User Story
+
+As a business owner
+I want to be able to view and manage the departments, roles and employees in my company
+So that I can organize and plan my business
+
+# Acceptance Criteria
+
+- Add departments, roles, employees
+
+- View departments, roles, employees
+
+- Update employee roles
+
+## Technologies used
 
 - node.js
 - package.json
