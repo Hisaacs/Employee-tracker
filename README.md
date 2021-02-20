@@ -34,6 +34,7 @@ So that I can organize and plan my business
 - Async/Await
 
 ### Demo
+![Employee-tracker](https://user-images.githubusercontent.com/19741669/108599655-6da5bb80-73cd-11eb-8af4-51ee9b631413.PNG)
 
 ## Table of Contents
 
