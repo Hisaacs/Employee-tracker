@@ -1,3 +1,11 @@
+# Deployed Link
+
+https://github.com/Hisaacs/Employee-tracker
+
+### Preview
+![Employee-tracker](https://user-images.githubusercontent.com/19741669/108618882-86a97d80-745c-11eb-8ba3-6ed67c038241.gif)
+
+
 # Employee-tracker!
 
 ![Badge](https://img.shields.io/badge/license-MIT-blue)
@@ -5,10 +13,6 @@
 ## Description
 
 A Node CLI solution to manage a companies employee information.
-
-# Deployed Link
-
-https://github.com/Hisaacs/Employee-tracker
 
 # User Story
 
@@ -47,5 +51,3 @@ Clone the repo to your local machine using `https://github.com/Hisaacs/Employee-
 
 Run the following command at the root of the cloned file and begin building your team's information.<br><br>`$ node index.js`<br><br>
 
-### Demo
-![Employee-tracker](https://user-images.githubusercontent.com/19741669/108618882-86a97d80-745c-11eb-8ba3-6ed67c038241.gif)
