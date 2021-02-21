@@ -33,9 +33,6 @@ So that I can organize and plan my business
 - MySQL
 - Async/Await
 
-### Demo
-![Employee-tracker](https://user-images.githubusercontent.com/19741669/108599722-cf662580-73cd-11eb-8bcd-ba64d8890aa1.PNG)
-
 ## Table of Contents
 
 - [Installation](#installation)
@@ -49,3 +46,6 @@ Clone the repo to your local machine using `https://github.com/Hisaacs/Employee-
 ## Usage
 
 Run the following command at the root of the cloned file and begin building your team's information.<br><br>`$ node index.js`<br><br>
+
+### Demo
+![Employee-tracker](https://user-images.githubusercontent.com/19741669/108618882-86a97d80-745c-11eb-8ba3-6ed67c038241.gif)
